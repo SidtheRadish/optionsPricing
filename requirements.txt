@@ -1,3 +1,6 @@
 numpy
 matplotlib
 scipy
+yfinance
+requests
+python-dotenv
