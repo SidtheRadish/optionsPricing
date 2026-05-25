@@ -13,7 +13,9 @@ data/
 engines/
   binomial.py      # CRR binomial tree pricer
   monte_carlo.py   # GBM Monte Carlo pricer
-main.py            # entry point / smoke test
+  greeks.py        # finite-difference Greeks vs the binomial engine
+app.py             # Streamlit frontend
+main.py            # CLI smoke test
 ```
 
 ## Setup
@@ -30,6 +32,19 @@ main.py            # entry point / smoke test
    ```
    python main.py
    ```
+4. Or launch the Streamlit frontend:
+   ```
+   streamlit run app.py
+   ```
+
+## Frontend
+
+`app.py` is a Streamlit UI on top of the data + engine layers. Pick a ticker, expiry, strike, and call/put in the sidebar; the main area has four tabs:
+
+- **Pricing** — live inputs and prices from binomial (American + European) and Monte Carlo, alongside the market mid.
+- **Greeks** — Δ Γ ν Θ ρ from finite differences against the binomial engine.
+- **Chain** — the full options chain for the selected expiry.
+- **Charts** — payoff diagram at expiry and model-vs-market price across the IV smile.
 
 ## Data sources
 
