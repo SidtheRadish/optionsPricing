@@ -4,3 +4,5 @@ scipy
 yfinance
 requests
 python-dotenv
+streamlit
+plotly

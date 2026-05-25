@@ -1,3 +1,3 @@
-from . import binomial, monte_carlo
+from . import binomial, greeks, monte_carlo
 
-__all__ = ["binomial", "monte_carlo"]
+__all__ = ["binomial", "greeks", "monte_carlo"]
